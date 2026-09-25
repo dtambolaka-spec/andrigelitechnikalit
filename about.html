@@ -5,22 +5,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tentang Saya | Andri Geli</title>
-    <link rel="icon" href="images/profil.png" type="image/png">
+
+    <!-- Google Site Verification -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/profil.png" type="image/png" />
+
+    <!-- Tailwind CSS & Custom Style -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
-    <!-- Memanggil efek teknologi -->
   </head>
-  <body class="bg-slate-950 text-slate-300 font-sans antialiased relative">
+  <body class="bg-slate-950 text-slate-300 font-sans antialiased relative overflow-x-hidden">
     <!-- CANVAS UNTUK HUJAN BINER -->
     <canvas id="matrixCanvas"></canvas>
+    
+    <!-- Ornamen Latar Belakang -->
     <div class="fixed inset-0 bg-grid pointer-events-none z-0"></div>
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-900/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
-    <nav
-      class="fixed w-full bg-slate-950/90 backdrop-blur-md border-b border-slate-800 z-50"
-    >
-      <div
-        class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center relative z-20"
-      >
+    <!-- NAVBAR -->
+    <nav class="fixed w-full bg-slate-950/90 backdrop-blur-md border-b border-slate-800 z-50">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center relative z-20">
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-3">
           <img
@@ -33,21 +38,20 @@
           >
         </a>
 
-        <!-- Menu Desktop -->
-<ul class="hidden md:flex space-x-8 font-medium text-sm text-slate-400">
-    <li><a href="index.html" class="hover:text-cyan-400 transition-colors">Beranda</a></li>
-    <li><a href="portfolio.html" class="hover:text-cyan-400 transition-colors">Portofolio</a></li>
-    <li><a href="about.html" class="text-cyan-400 glow-text">Tentang Saya</a></li>
-</ul>
+        <!-- Menu Desktop (PC & Tablet) -->
+        <ul class="hidden md:flex space-x-8 font-medium text-sm text-slate-400">
+          <li>
+            <a href="index.html" class="hover:text-cyan-400 transition-colors">Beranda</a>
+          </li>
+          <li>
+            <a href="portfolio.html" class="hover:text-cyan-400 transition-colors">Portofolio</a>
+          </li>
+          <li>
+            <a href="about.html" class="text-cyan-400 glow-text">Tentang Saya</a>
+          </li>
+        </ul>
 
-<!-- Menu Mobile -->
-<ul class="flex flex-col space-y-4 p-6 text-center text-slate-300 font-medium">
-    <li><a href="index.html" class="hover:text-cyan-400 transition-colors block py-2 border-b border-slate-800">Beranda</a></li>
-    <li><a href="portfolio.html" class="hover:text-cyan-400 transition-colors block py-2 border-b border-slate-800">Portofolio</a></li>
-    <li><a href="about.html" class="text-cyan-400 glow-text block py-2">Tentang Saya</a></li>
-</ul>
-
-        <!-- Tombol Menu Hamburger (Khusus HP) - Muncul HANYA di Layar Kecil -->
+        <!-- Tombol Menu Hamburger (Khusus HP) -->
         <button
           id="mobile-menu-btn"
           class="block md:hidden text-cyan-400 hover:text-white focus:outline-none cursor-pointer"
@@ -69,18 +73,16 @@
         </button>
       </div>
 
-      <!-- Menu Dropdown Mobile (Muncul ke bawah saat tombol ditekan) -->
+      <!-- Menu Dropdown Mobile -->
       <div
         id="mobile-menu"
         class="hidden md:hidden absolute top-full left-0 w-full bg-slate-900/95 backdrop-blur-lg border-b border-slate-800 shadow-2xl z-10"
       >
-        <ul
-          class="flex flex-col space-y-4 p-6 text-center text-slate-300 font-medium"
-        >
+        <ul class="flex flex-col space-y-4 p-6 text-center text-slate-300 font-medium">
           <li>
             <a
               href="index.html"
-              class="text-cyan-400 glow-text block py-2 border-b border-slate-800"
+              class="hover:text-cyan-400 transition-colors block py-2 border-b border-slate-800"
               >Beranda</a
             >
           </li>
@@ -94,7 +96,7 @@
           <li>
             <a
               href="about.html"
-              class="hover:text-cyan-400 transition-colors block py-2"
+              class="text-cyan-400 glow-text block py-2"
               >Tentang Saya</a
             >
           </li>
@@ -103,7 +105,7 @@
     </nav>
 
     <!-- PROFIL & PENDIDIKAN -->
-    <section class="relative pt-32 pb-20 px-4 max-w-4xl mx-auto z-10">
+    <section class="relative pt-32 pb-36 px-4 max-w-4xl mx-auto z-10">
       <div
         class="bg-slate-900/60 backdrop-blur-md border border-slate-800 rounded-3xl shadow-[0_0_30px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col md:flex-row"
       >
@@ -146,19 +148,19 @@
             </h3>
           </div>
           <p class="text-slate-400 mb-8 leading-relaxed font-light">
-            Selain berkarier sebagai praktisi IT, teknisi, dan *developer*, saya
+            Selain berkarier sebagai praktisi IT, teknisi, dan <em>developer</em>, saya
             juga memiliki dedikasi yang tinggi di dunia pendidikan. Saat ini
             saya aktif sebagai
             <strong class="text-white"
-              >Guru SMK jurusan Desain Komunikasi Visual dan Teknik Informatika</strong
+              >Guru SMK jurusan Desain Komunikasi Visual (DKV)</strong
             >, mengelola sistem informasi sebagai
             <strong class="text-white"
               >Operator Sekolah di PAUD TK St. Dominikus Weepangali</strong
-            >, serta merintis sebagai seorang Developer Web
-            <strong class="text-white">Pengembang Website</strong>. Gabungan
+            >, serta merintis layanan bimbingan
+            <strong class="text-white">Les Privat Komputer</strong>. Gabungan
             antara latar belakang akademis Informatika dan pengalaman mengajar
             membuat saya mampu menciptakan sistem yang tidak hanya canggih, tapi
-            juga mudah digunakan (*user-friendly*).
+            juga mudah digunakan (<em>user-friendly</em>).
           </p>
 
           <div
@@ -340,8 +342,6 @@
       </div>
     </section>
 
-    <!-- Memanggil script efek biner hujan -->
-    <script src="script.js"></script>
     <!-- EFEK TEKS BERJALAN (TICKER) -->
     <div class="ticker-wrap">
       <div class="ticker">
@@ -360,7 +360,8 @@
         <span class="ticker-item">HUBUNGI: 0821-9962-6754</span>
       </div>
     </div>
-    <!-- Panggil JS -->
+
+    <!-- Panggil Skrip HANYA SATU KALI DI SINI -->
     <script src="script.js"></script>
   </body>
 </html>
