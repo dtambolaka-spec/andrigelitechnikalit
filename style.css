@@ -1,0 +1,88 @@
+/* Custom Animations & Tech Effects */
+.glow-text {
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.7);
+}
+
+/* Latar belakang grid futuristik */
+.bg-grid {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Kanvas untuk hujan biner agar selalu di belakang */
+#matrixCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0; /* Ubah nilai ini menjadi 0 agar tidak tenggelam di belakang */
+  opacity: 0.3;
+  pointer-events: none; /* Agar tidak mengganggu saat diklik */
+}
+
+/* Efek Glassmorphism untuk kartu portofolio */
+.tech-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(51, 65, 85, 0.8);
+  transition: all 0.4s ease;
+}
+
+/* Efek menyala saat portofolio disorot mouse */
+.tech-card:hover {
+  border-color: rgba(34, 211, 238, 0.6);
+  box-shadow:
+    0 0 25px rgba(34, 211, 238, 0.2),
+    inset 0 0 15px rgba(34, 211, 238, 0.1);
+  transform: translateY(-5px);
+}
+/* Efek Teks Berjalan (Ticker) Cyberpunk */
+.ticker-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(2, 6, 23, 0.9);
+  border-top: 1px solid rgba(34, 211, 238, 0.4);
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.2);
+  z-index: 100;
+  padding: 8px 0;
+  backdrop-filter: blur(5px);
+}
+
+.ticker {
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 100%;
+  box-sizing: content-box;
+  /* Ubah angka 25s menjadi lebih kecil jika ingin teks bergerak lebih cepat */
+  animation: ticker-anim 25s linear infinite;
+}
+
+/* Teks akan berhenti jika disorot mouse (opsional) */
+.ticker:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-anim {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.ticker-item {
+  display: inline-block;
+  padding: 0 3rem;
+  font-family: monospace;
+  color: #22d3ee;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
