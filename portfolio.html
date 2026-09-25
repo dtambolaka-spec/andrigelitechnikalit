@@ -1,26 +1,29 @@
 <!doctype html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
   <head>
-    <meta name="google-site-verification" content="ZmskO6DYEKkehVW59X0VpZHinHwdDvKTjwTCXvd7oS8" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio | Andri Geli</title>
-    <link rel="icon" href="images/profil.png" type="image/png">
+
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="ZmskO6DYEKkehVW59X0VpZHinHwdDvKTjwTCXvd7oS8" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/profil.png" type="image/png" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
-    <!-- Panggil CSS -->
   </head>
-  <body class="bg-slate-950 text-slate-300 font-sans antialiased relative">
+  <body class="bg-slate-950 text-slate-300 font-sans antialiased relative overflow-x-hidden">
+    
     <!-- CANVAS UNTUK HUJAN BINER -->
     <canvas id="matrixCanvas"></canvas>
+    
     <div class="fixed inset-0 bg-grid pointer-events-none z-0"></div>
 
-    <nav
-      class="fixed w-full bg-slate-950/90 backdrop-blur-md border-b border-slate-800 z-50"
-    >
-      <div
-        class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center relative z-20"
-      >
+    <!-- NAVBAR -->
+    <nav class="fixed w-full bg-slate-950/90 backdrop-blur-md border-b border-slate-800 z-50">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center relative z-20">
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-3">
           <img
@@ -33,21 +36,20 @@
           >
         </a>
 
-  <!-- Menu Desktop -->
-<ul class="hidden md:flex space-x-8 font-medium text-sm text-slate-400">
-    <li><a href="index.html" class="hover:text-cyan-400 transition-colors">Beranda</a></li>
-    <li><a href="portfolio.html" class="text-cyan-400 glow-text">Portofolio</a></li>
-    <li><a href="about.html" class="hover:text-cyan-400 transition-colors">Tentang Saya</a></li>
-</ul>
+        <!-- Menu Desktop (PC & Tablet) -->
+        <ul class="hidden md:flex space-x-8 font-medium text-sm text-slate-400">
+          <li>
+            <a href="index.html" class="hover:text-cyan-400 transition-colors">Beranda</a>
+          </li>
+          <li>
+            <a href="portfolio.html" class="text-cyan-400 glow-text">Portofolio</a>
+          </li>
+          <li>
+            <a href="about.html" class="hover:text-cyan-400 transition-colors">Tentang Saya</a>
+          </li>
+        </ul>
 
-<!-- Menu Mobile -->
-<ul class="flex flex-col space-y-4 p-6 text-center text-slate-300 font-medium">
-    <li><a href="index.html" class="hover:text-cyan-400 transition-colors block py-2 border-b border-slate-800">Beranda</a></li>
-    <li><a href="portfolio.html" class="text-cyan-400 glow-text block py-2 border-b border-slate-800">Portofolio</a></li>
-    <li><a href="about.html" class="hover:text-cyan-400 transition-colors block py-2">Tentang Saya</a></li>
-</ul>
-
-        <!-- Tombol Menu Hamburger (Khusus HP) - Muncul HANYA di Layar Kecil -->
+        <!-- Tombol Menu Hamburger (Khusus HP) -->
         <button
           id="mobile-menu-btn"
           class="block md:hidden text-cyan-400 hover:text-white focus:outline-none cursor-pointer"
@@ -69,25 +71,23 @@
         </button>
       </div>
 
-      <!-- Menu Dropdown Mobile (Muncul ke bawah saat tombol ditekan) -->
+      <!-- Menu Dropdown Mobile -->
       <div
         id="mobile-menu"
         class="hidden md:hidden absolute top-full left-0 w-full bg-slate-900/95 backdrop-blur-lg border-b border-slate-800 shadow-2xl z-10"
       >
-        <ul
-          class="flex flex-col space-y-4 p-6 text-center text-slate-300 font-medium"
-        >
+        <ul class="flex flex-col space-y-4 p-6 text-center text-slate-300 font-medium">
           <li>
             <a
               href="index.html"
-              class="text-cyan-400 glow-text block py-2 border-b border-slate-800"
+              class="hover:text-cyan-400 transition-colors block py-2 border-b border-slate-800"
               >Beranda</a
             >
           </li>
           <li>
             <a
               href="portfolio.html"
-              class="hover:text-cyan-400 transition-colors block py-2 border-b border-slate-800"
+              class="text-cyan-400 glow-text block py-2 border-b border-slate-800"
               >Portofolio</a
             >
           </li>
@@ -103,7 +103,7 @@
     </nav>
 
     <!-- GALERI PORTOFOLIO DENGAN TECH EFFECTS -->
-    <section class="relative pt-32 pb-20 px-4 max-w-6xl mx-auto z-10">
+    <section class="relative pt-32 pb-32 px-4 max-w-6xl mx-auto z-10">
       <div class="text-center mb-16">
         <h2 class="text-4xl font-extrabold text-white">
           System <span class="text-cyan-400 glow-text">Logs</span> & Proyek
@@ -115,9 +115,7 @@
 
       <!-- Web Development -->
       <div class="mb-12">
-        <div
-          class="inline-block bg-cyan-900/30 border border-cyan-500/30 px-4 py-1 rounded mb-6 backdrop-blur-sm"
-        >
+        <div class="inline-block bg-cyan-900/30 border border-cyan-500/30 px-4 py-1 rounded mb-6 backdrop-blur-sm">
           <h3 class="text-lg font-mono text-cyan-400 uppercase">
             > Module_01: Web & App Dev
           </h3>
@@ -156,9 +154,7 @@
 
       <!-- Hardware -->
       <div class="mb-12">
-        <div
-          class="inline-block bg-blue-900/30 border border-blue-500/30 px-4 py-1 rounded mb-6 backdrop-blur-sm"
-        >
+        <div class="inline-block bg-blue-900/30 border border-blue-500/30 px-4 py-1 rounded mb-6 backdrop-blur-sm">
           <h3 class="text-lg font-mono text-blue-400 uppercase">
             > Module_02: Hardware Ops
           </h3>
@@ -167,60 +163,70 @@
           <div class="tech-card rounded-xl p-2 cursor-crosshair">
             <img
               src="images/hard1.jpeg"
+              alt="Hardware 1"
               class="w-full h-32 object-cover rounded-lg"
             />
           </div>
           <div class="tech-card rounded-xl p-2 cursor-crosshair">
             <img
               src="images/hard2.jpeg"
+              alt="Hardware 2"
               class="w-full h-32 object-cover rounded-lg"
             />
           </div>
           <div class="tech-card rounded-xl p-2 cursor-crosshair">
             <img
               src="images/hard3.jpeg"
+              alt="Hardware 3"
               class="w-full h-32 object-cover rounded-lg"
             />
           </div>
           <div class="tech-card rounded-xl p-2 cursor-crosshair">
             <img
               src="images/hard4.jpeg"
+              alt="Hardware 4"
               class="w-full h-32 object-cover rounded-lg"
             />
           </div>
           <div class="tech-card rounded-xl p-2 cursor-crosshair">
             <img
               src="images/hard5.jpeg"
+              alt="Hardware 5"
               class="w-full h-32 object-cover rounded-lg"
             />
           </div>
           <div class="tech-card rounded-xl p-2 cursor-crosshair">
             <img
               src="images/hard6.jpeg"
+              alt="Hardware 6"
               class="w-full h-32 object-cover rounded-lg"
             />
           </div>
           <div class="tech-card rounded-xl p-2 cursor-crosshair">
             <img
               src="images/hard7.jpeg"
+              alt="Hardware 7"
               class="w-full h-32 object-cover rounded-lg"
             />
           </div>
           <div class="tech-card rounded-xl p-2 cursor-crosshair">
             <img
               src="images/hard8.jpeg"
+              alt="Hardware 8"
               class="w-full h-32 object-cover rounded-lg"
             />
           </div>
           <div class="tech-card rounded-xl p-2 cursor-crosshair">
             <img
               src="images/hard9.jpeg"
+              alt="Hardware 9"
               class="w-full h-32 object-cover rounded-lg"
             />
           </div>
           <div class="tech-card rounded-xl p-2 cursor-crosshair">
             <img
               src="images/hard10.jpeg"
+              alt="Hardware 10"
               class="w-full h-32 object-cover rounded-lg"
             />
           </div>
@@ -229,9 +235,7 @@
 
       <!-- Instalasi -->
       <div class="mb-12">
-        <div
-          class="inline-block bg-purple-900/30 border border-purple-500/30 px-4 py-1 rounded mb-6 backdrop-blur-sm"
-        >
+        <div class="inline-block bg-purple-900/30 border border-purple-500/30 px-4 py-1 rounded mb-6 backdrop-blur-sm">
           <h3 class="text-lg font-mono text-purple-400 uppercase">
             > Module_03: Network & Config
           </h3>
@@ -240,24 +244,28 @@
           <div class="tech-card rounded-xl p-2 cursor-crosshair">
             <img
               src="images/instal1.jpeg"
+              alt="Instalasi 1"
               class="w-full h-40 object-cover rounded-lg"
             />
           </div>
           <div class="tech-card rounded-xl p-2 cursor-crosshair">
             <img
               src="images/instal2.jpeg"
+              alt="Instalasi 2"
               class="w-full h-40 object-cover rounded-lg"
             />
           </div>
           <div class="tech-card rounded-xl p-2 cursor-crosshair">
             <img
               src="images/instal3.jpeg"
+              alt="Instalasi 3"
               class="w-full h-40 object-cover rounded-lg"
             />
           </div>
           <div class="tech-card rounded-xl p-2 cursor-crosshair">
             <img
               src="images/instal4.jpeg"
+              alt="Instalasi 4"
               class="w-full h-40 object-cover rounded-lg"
             />
           </div>
@@ -274,15 +282,14 @@
         <span class="ticker-item">///</span>
         <span class="ticker-item">GURU SMK JURUSAN DKV</span>
         <span class="ticker-item">///</span>
-        <span class="ticker-item"
-          >MELAYANI PERAKITAN PC, MAINTENANCE & INSTALASI JARINGAN</span
-        >
+        <span class="ticker-item">MELAYANI PERAKITAN PC, MAINTENANCE & INSTALASI JARINGAN</span>
         <span class="ticker-item">///</span>
         <span class="ticker-item">SISTEM ABSENSI & APLIKASI WEB KUSTOM</span>
         <span class="ticker-item">///</span>
         <span class="ticker-item">HUBUNGI: 0821-9962-6754</span>
       </div>
     </div>
+
     <!-- Panggil JS -->
     <script src="script.js"></script>
   </body>
