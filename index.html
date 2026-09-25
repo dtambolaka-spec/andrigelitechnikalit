@@ -18,16 +18,16 @@
     ></div>
     <!-- NAVBAR -->
     <nav
-      class="fixed w-full bg-slate-950/80 backdrop-blur-md border-b border-slate-800 z-50"
+      class="fixed w-full bg-slate-950/90 backdrop-blur-md border-b border-slate-800 z-50"
     >
       <div
-        class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center relative z-10"
+        class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center relative z-20"
       >
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-3">
           <img
             src="images/logo.png"
-            alt="Logo Andri Geli"
+            alt="Logo Andri"
             class="h-10 bg-white rounded p-1"
           />
           <span class="text-xl font-bold text-white tracking-tight"
@@ -35,7 +35,7 @@
           >
         </a>
 
-        <!-- Menu Desktop (PC & Tablet) -->
+        <!-- Menu Desktop (PC & Tablet) - Sembunyi di HP -->
         <ul class="hidden md:flex space-x-8 font-medium text-sm text-slate-400">
           <li>
             <a href="index.html" class="text-cyan-400 glow-text">Beranda</a>
@@ -54,51 +54,54 @@
           </li>
         </ul>
 
-        <!-- Tombol Menu Hamburger (Khusus HP) -->
+        <!-- Tombol Menu Hamburger (Khusus HP) - Muncul HANYA di Layar Kecil -->
         <button
           id="mobile-menu-btn"
-          class="md:hidden text-cyan-400 focus:outline-none hover:text-white transition"
+          class="block md:hidden text-cyan-400 hover:text-white focus:outline-none cursor-pointer"
         >
           <svg
+            xmlns="http://www.w3.org/2000/svg"
             class="w-8 h-8"
             fill="none"
-            stroke="currentColor"
             viewBox="0 0 24 24"
+            stroke="currentColor"
           >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
+              d="M4 6h16M4 12h16M4 18h16"
+            />
           </svg>
         </button>
       </div>
 
-      <!-- Menu Dropdown Mobile (Tersembunyi secara default) -->
+      <!-- Menu Dropdown Mobile (Muncul ke bawah saat tombol ditekan) -->
       <div
         id="mobile-menu"
-        class="hidden md:hidden absolute w-full bg-slate-900/95 backdrop-blur-md border-b border-slate-800 shadow-xl"
+        class="hidden md:hidden absolute top-full left-0 w-full bg-slate-900/95 backdrop-blur-lg border-b border-slate-800 shadow-2xl z-10"
       >
         <ul
-          class="flex flex-col space-y-6 p-6 text-center text-slate-300 font-medium"
+          class="flex flex-col space-y-4 p-6 text-center text-slate-300 font-medium"
         >
           <li>
-            <a href="index.html" class="text-cyan-400 glow-text block"
+            <a
+              href="index.html"
+              class="text-cyan-400 glow-text block py-2 border-b border-slate-800"
               >Beranda</a
             >
           </li>
           <li>
             <a
               href="portfolio.html"
-              class="hover:text-cyan-400 transition-colors block"
+              class="hover:text-cyan-400 transition-colors block py-2 border-b border-slate-800"
               >Portofolio</a
             >
           </li>
           <li>
             <a
               href="about.html"
-              class="hover:text-cyan-400 transition-colors block"
+              class="hover:text-cyan-400 transition-colors block py-2"
               >Tentang Saya</a
             >
           </li>
